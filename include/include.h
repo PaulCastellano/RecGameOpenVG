@@ -6,11 +6,14 @@
 #include <errno.h>
 #include <unistd.h>
 
-#include <pthread.h>
-
 #include <wiringSerial.h>
 #include <wiringPi.h>
 
+//#include "../assets/DejaVuSansMono.inc"
+#include "VG/openvg.h"
+#include "VG/vgu.h"
+#include "shapes.h"
+#include "fontinfo.h"
 
 
 class Game
@@ -24,6 +27,7 @@ private:
     int colorMode;
     int time;
     int timerCount;
+    //Fontinfo DejaFont;
 public:
     //Setters
     void    setWindowWidth(int windowWidth);
@@ -43,7 +47,8 @@ public:
     int     getColorMode();
     int     getTime();
     int     getTimerCount();
-
+    //Screens
     void    mainMenu();
+    void    scoreScreen();
 
 };

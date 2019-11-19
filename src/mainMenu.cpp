@@ -3,6 +3,6 @@
 void    Game::mainMenu() {
     Start(this->windowWidth, this->windowHeight);
     Background(255, 255, 255);
-    Image(0, 0, this->windowWidth, this->windowHeight, "/home/pi/Desktop/RecGame/RPI/assets/mainMenu.png");
+    Image(0, 0, this->windowWidth, this->windowHeight, "/home/pi/Desktop/RecGameOpenVG/assets/download.jpeg");
     End();
 }

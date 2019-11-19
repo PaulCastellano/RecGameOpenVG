@@ -1,0 +1,1 @@
+g++ -I/opt/vc/include -I/opt/vc/include/interface/vmcs_host/linux -I/opt/vc/include/interface/vcos/pthreads -I/usr/include/freetype2 main.cpp src/setters.cpp src/getters.cpp src/scoreScreen.cpp src/mainMenu.cpp -o anysource -lshapes
