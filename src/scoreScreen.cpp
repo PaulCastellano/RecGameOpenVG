@@ -20,7 +20,7 @@ void Game::scoreScreen()
 	while (++i < str.length())
 		s[i] = str[i];
 	s[i] = '\0';
-	Text(this->windowWidth / 150, this->windowHeight - 10 - this->windowWidth / 50, s, SerifTypeface, this->windowWidth / 50);
+	Text(this->windowWidth / 150, this->windowHeight - 10 - this->windowWidth / 50, s, SerifTypeface, this->windowWidth / 40);
 	free(s);
 
 	if (this->mode == 1)
@@ -34,7 +34,7 @@ void Game::scoreScreen()
 	while (++i < str.length())
 		s[i] = str[i];
 	s[i] = '\0';
-	Text(this->windowWidth / 150, this->windowHeight - 10 - 2 * TextHeight(SerifTypeface, this->windowWidth / 50), s, SerifTypeface, this->windowWidth / 50);
+	Text(this->windowWidth / 150, this->windowHeight - 10 - 2 * TextHeight(SerifTypeface, this->windowWidth / 50), s, SerifTypeface, this->windowWidth / 40);
 	free(s);
 
 	if (this->colorMode == 1)
@@ -46,14 +46,14 @@ void Game::scoreScreen()
 	while (++i < str.length())
 		s[i] = str[i];
 	s[i] = '\0';
-	Text(this->windowWidth / 150, this->windowHeight - 10 - 3 * TextHeight(SerifTypeface, this->windowWidth / 50), s, SerifTypeface, this->windowWidth / 50);
+	Text(this->windowWidth / 150, this->windowHeight - 10 - 3 * TextHeight(SerifTypeface, this->windowWidth / 50), s, SerifTypeface, this->windowWidth / 40);
 	Fill(255, 0, 0, 1);
-	Rect(TextWidth(s, SerifTypeface, this->windowWidth / 50) + 2, this->windowHeight - 10 - 3 * TextHeight(SerifTypeface, this->windowWidth / 50), this->windowWidth / 24, TextHeight(SerifTypeface, this->windowWidth / 50));
+	Rect(TextWidth(s, SerifTypeface, this->windowWidth / 40) + 2, this->windowHeight - 10 - 3 * TextHeight(SerifTypeface, this->windowWidth / 40), this->windowWidth / 24, TextHeight(SerifTypeface, this->windowWidth / 40));
 	if (this->colorMode == 2)
 	{
 		Fill(0, 0, 255, 1);
 
-		Rect(TextWidth(s, SerifTypeface, this->windowWidth / 50) + 2 + this->windowWidth / 24, this->windowHeight - 10 - 3 * TextHeight(SerifTypeface, this->windowWidth / 50), this->windowWidth / 24, TextHeight(SerifTypeface, this->windowWidth / 50));
+		Rect(TextWidth(s, SerifTypeface, this->windowWidth / 40) + 2 + this->windowWidth / 24, this->windowHeight - 10 - 3 * TextHeight(SerifTypeface, this->windowWidth / 40), this->windowWidth / 24, TextHeight(SerifTypeface, this->windowWidth / 40));
 
 		Fill(0, 0, 0, 1);
 		//TO DO!!!
@@ -72,7 +72,7 @@ void Game::scoreScreen()
 	while (++i < str.length())
 		s[i] = str[i];
 	s[i] = '\0';
-	Text(this->windowWidth / 150, this->windowHeight - 10 - 4 * TextHeight(SerifTypeface, this->windowWidth / 50), s, SerifTypeface, this->windowWidth / 50);
+	Text(this->windowWidth / 150, this->windowHeight - 10 - 4 * TextHeight(SerifTypeface, this->windowWidth / 40), s, SerifTypeface, this->windowWidth / 40);
 	free(s);
 
 	if (this->timerCount < 10)
@@ -87,7 +87,7 @@ void Game::scoreScreen()
 	while (++i < str.length())
 		s[i] = str[i];
 	s[i] = '\0';
-	Text(this->windowWidth / 4, 0, s, SerifTypeface, this->windowWidth / 20);
+	Text(this->windowWidth / 7, this->windowHeight - 50, s, SerifTypeface, this->windowWidth / 10);
 	free(s);
 
 	if (abs(this->score) < 10)
