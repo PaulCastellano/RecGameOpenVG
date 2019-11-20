@@ -125,7 +125,7 @@ int main()
 		sleep(3);
 		pthread_create(&timerThread, NULL, timer, NULL);
 		pthread_create(&scoreShowThread, NULL, score, NULL);
-		while (g.gettimerCount() >= 0)
+		while (g.getTimerCount() >= 0)
 		{
 			c = serialGetchar(fd);
 			if (c == '+')
@@ -138,7 +138,7 @@ int main()
 			}
 			else if (c == 'R')
 			{
-				g.settimerCount(-1);
+				g.setTimerCount(-1);
 			}
 		}
 		pthread_cancel(timerThread);

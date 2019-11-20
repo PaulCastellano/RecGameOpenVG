@@ -23,7 +23,7 @@ void Game::resultScreen()
 		str = "SCOR:-";
 	else
 		str = "SCOR:";
-	str += to_string(abs(this->score));
+	str += std::to_string(abs(this->score));
 	s = (char *)malloc(sizeof(char) * str.length() + 1);
 	i = -1;
 	while (++i < str.length())

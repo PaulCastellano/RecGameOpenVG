@@ -73,13 +73,13 @@ void Game::scoreScreen()
 	Text(this->windowWidth / 150, this->windowHeight - 10 - 4 * TextHeight(SerifTypeface, this->windowWidth / 50), s, SerifTypeface, this->windowWidth / 50);
 	free(s);
 
-	if (cnt < 10)
+	if (this->timerCount < 10)
 		str = "TIMP:00";
-	else if (cnt < 100)
+	else if (this->timerCount < 100)
 		str = "TIMP:0";
 	else
 		str = "TIMP:";
-	str += to_string(cnt);
+	str += std::to_string(this->timerCount);
 	s = (char *)malloc(sizeof(char) * str.length() + 1);
 	i = -1;
 	while (++i < str.length())
@@ -102,7 +102,7 @@ void Game::scoreScreen()
 		str = "SCOR:-";
 	else
 		str = "SCOR:";
-	str += to_string(abs(this->score));
+	str += std::to_string(abs(this->score));
 	s = (char *)malloc(sizeof(char) * str.length() + 1);
 	i = -1;
 	while (++i < str.length())
