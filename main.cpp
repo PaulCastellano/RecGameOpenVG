@@ -136,6 +136,9 @@ int main()
 		// std::cout << g.getZone() << "  " << g.getMode() << "  " << g.getColorMode() << "  " << g.getTime() << "  " << std::endl;
 		g.setTimerCount(60 * g.getTime());
 		sleep(3);
+		finish();
+
+		init(&w, &h);
 		pthread_create(&timerThread, NULL, timer, NULL);
 		pthread_create(&scoreShowThread, NULL, score, NULL);
 		while (g.getTimerCount() >= 0)
@@ -144,11 +147,15 @@ int main()
 		}
 		pthread_cancel(timerThread);
 		pthread_cancel(scoreShowThread);
+		finish();
 		if (c != 'R')
 		{
+			init(&w, &h);
 			g.resultScreen();
 			sleep(5);
+			finish();
 		}
+		init(&w, &h);
 	}
 	finish();
 	return (0);
