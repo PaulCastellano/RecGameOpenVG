@@ -2,6 +2,7 @@
 
 Game g;
 char c;
+int fd;
 
 void *score(void *varg)
 {
@@ -39,7 +40,6 @@ int main()
 	bool gameStart;
 	int w;
 	int h;
-	int fd;
 
 	int settingsCount;
 
