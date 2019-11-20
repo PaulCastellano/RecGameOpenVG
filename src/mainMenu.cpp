@@ -1,8 +1,10 @@
 #include "../include/include.h"
 
-void    Game::mainMenu() {
+void Game::mainMenu()
+{
+    WindowClear();
     Start(this->windowWidth, this->windowHeight);
     Background(255, 255, 255);
-    Image(0, 0, this->windowWidth, this->windowHeight, "/home/pi/Desktop/RecGameOpenVG/assets/download.jpeg");
+    Image(0, 0, this->windowWidth, this->windowHeight, "/home/pi/Desktop/RecGameOpenVG/assets/mainMenu.jpeg");
     End();
 }
