@@ -50,9 +50,8 @@ void Game::scoreScreen()
 	Text(this->windowWidth / 150, this->windowHeight - 10 - 3 * TextHeight(SerifTypeface, this->windowWidth / 50), s, SerifTypeface, this->windowWidth / 50);
 	Fill(255, 0, 0, 1);
 	std::cout << "2" << std::endl;
-	Rect(0, 0, )
-		// Rect(TextWidth(s, SerifTypeface, this->windowWidth / 50) + 2, this->windowHeight - 10 - 3 * TextHeight(SerifTypeface, this->windowWidth / 50), this->windowWidth / 24, TextHeight(SerifTypeface, this->windowWidth / 50));
-		std::cout
+	Rect(TextWidth(s, SerifTypeface, this->windowWidth / 50) + 2, this->windowHeight - 10 - 3 * TextHeight(SerifTypeface, this->windowWidth / 50), this->windowWidth / 24, TextHeight(SerifTypeface, this->windowWidth / 50));
+	std::cout
 		<< "3" << std::endl;
 	if (this->colorMode == 2)
 	{
