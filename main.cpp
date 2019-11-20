@@ -58,6 +58,7 @@ int main()
 				  << std::endl;
 		return 1;
 	}
+	Start(w, h);
 	while (1)
 	{
 		g.setScore(0);

@@ -6,7 +6,7 @@ void Game::resultScreen()
 	char *s;
 	int i;
 	WindowClear();
-	Start(this->windowWidth, this->windowHeight);
+	// Start(this->windowWidth, this->windowHeight);
 	Background(255, 255, 255);
 
 	if (abs(this->score) < 10)

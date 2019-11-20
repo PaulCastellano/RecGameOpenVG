@@ -7,7 +7,7 @@ void Game::scoreScreen()
 	int i;
 
 	WindowClear();
-	Start(this->windowWidth, this->windowHeight);
+	// Start(this->windowWidth, this->windowHeight);
 	Background(255, 255, 255);
 	if (this->zone == 1)
 		str = "Zona: 1";
