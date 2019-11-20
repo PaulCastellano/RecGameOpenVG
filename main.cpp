@@ -7,7 +7,19 @@ void *score(void *varg)
 {
 	while (g.getTimerCount() >= 0)
 	{
-		g.scoreScreen();
+		c = serialGetchar(fd);
+		if (c == '+')
+		{
+			g.setScore(g.getScore() + 1);
+		}
+		else if (g.getColorMode() == 2 && c == '-')
+		{
+			g.setScore(g.getScore() - 1);
+		}
+		else if (c == 'R')
+		{
+			g.setTimerCount(-1);
+		}
 	}
 	return (varg);
 }
@@ -127,19 +139,7 @@ int main()
 		pthread_create(&scoreShowThread, NULL, score, NULL);
 		while (g.getTimerCount() >= 0)
 		{
-			c = serialGetchar(fd);
-			if (c == '+')
-			{
-				g.setScore(g.getScore() + 1);
-			}
-			else if (g.getColorMode() == 2 && c == '-')
-			{
-				g.setScore(g.getScore() - 1);
-			}
-			else if (c == 'R')
-			{
-				g.setTimerCount(-1);
-			}
+			g.scoreScreen();
 		}
 		pthread_cancel(timerThread);
 		pthread_cancel(scoreShowThread);
