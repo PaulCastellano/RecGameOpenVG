@@ -46,13 +46,18 @@ void Game::scoreScreen()
 	while (++i < str.length())
 		s[i] = str[i];
 	s[i] = '\0';
+	std::cout << "1" << std::endl;
 	Text(this->windowWidth / 150, this->windowHeight - 10 - 3 * TextHeight(SerifTypeface, this->windowWidth / 50), s, SerifTypeface, this->windowWidth / 50);
 	Fill(255, 0, 0, 1);
+	std::cout << "2" << std::endl;
 	Rect(TextWidth(s, SerifTypeface, this->windowWidth / 50) + 2, this->windowHeight - 10 - 3 * TextHeight(SerifTypeface, this->windowWidth / 50), this->windowWidth / 24, TextHeight(SerifTypeface, this->windowWidth / 50));
+	std::cout << "3" << std::endl;
 	if (this->colorMode == 2)
 	{
 		Fill(0, 0, 255, 1);
+		std::cout << "4" << std::endl;
 		Rect(TextWidth(s, SerifTypeface, this->windowWidth / 50) + 2 + this->windowWidth / 24, this->windowHeight - 10 - 3 * TextHeight(SerifTypeface, this->windowWidth / 50), this->windowWidth / 24, TextHeight(SerifTypeface, this->windowWidth / 50));
+		std::cout << "5" << std::endl;
 		Fill(0, 0, 0, 1);
 		//TO DO!!!
 		// Line(...);
