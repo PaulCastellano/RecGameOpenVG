@@ -132,7 +132,7 @@ int main()
 				gameStart = true;
 		}
 
-		std::cout << g.getZone() << "  " << g.getMode() << "  " << g.getColorMode() << "  " << g.getTime() << "  " << std::endl;
+		// std::cout << g.getZone() << "  " << g.getMode() << "  " << g.getColorMode() << "  " << g.getTime() << "  " << std::endl;
 		g.setTimerCount(60 * g.getTime());
 		sleep(3);
 		pthread_create(&timerThread, NULL, timer, NULL);
