@@ -138,16 +138,16 @@ int main()
 		sleep(3);
 		finish();
 
-		init(&w, &h);
 		pthread_create(&timerThread, NULL, timer, NULL);
 		pthread_create(&scoreShowThread, NULL, score, NULL);
 		while (g.getTimerCount() >= 0)
 		{
+			init(&w, &h);
 			g.scoreScreen();
+			finish();
 		}
 		pthread_cancel(timerThread);
 		pthread_cancel(scoreShowThread);
-		finish();
 		if (c != 'R')
 		{
 			init(&w, &h);
