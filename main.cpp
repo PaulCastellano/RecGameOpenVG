@@ -1,6 +1,7 @@
 #include "include/include.h"
 
 Game g;
+char c;
 
 void *score(void *varg)
 {
@@ -26,7 +27,6 @@ int main()
 	bool gameStart;
 	int w;
 	int h;
-	char c;
 	int fd;
 
 	int settingsCount;
