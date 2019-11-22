@@ -28,7 +28,10 @@ private:
     int colorMode;
     int time;
     int timerCount;
-    //Fontinfo DejaFont;
+    int settingsSize = 35;
+    int xOffset = 10;
+    int yOffset = 10;
+
 public:
     //Setters
     void setWindowWidth(int windowWidth);

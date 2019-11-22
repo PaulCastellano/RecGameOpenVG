@@ -20,7 +20,7 @@ void Game::scoreScreen()
 	while (++i < str.length())
 		s[i] = str[i];
 	s[i] = '\0';
-	//Text(this->windowWidth / 150, this->windowHeight - 10 - this->windowWidth / 50, s, SerifTypeface, this->windowWidth / 40);
+	Text(this->xOffset, this->windowHeight - TextHeight(SerifTypeface, this->windowWidth / this->settingsSize) - this->yOffset, s, SerifTypeface, this->windowWidth / this->settingsSize);
 	free(s);
 
 	if (this->mode == 1)
@@ -87,7 +87,7 @@ void Game::scoreScreen()
 	while (++i < str.length())
 		s[i] = str[i];
 	s[i] = '\0';
-	Text(this->windowWidth / 6, this->windowHeight - 150 - TextHeight(SerifTypeface, this->windowWidth / 10), s, SerifTypeface, this->windowWidth / 10);
+	Text(this->windowWidth / 6, this->windowHeight - TextHeight(SerifTypeface, this->windowWidth / 10) - 150, s, SerifTypeface, this->windowWidth / 10);
 	free(s);
 
 	if (abs(this->score) < 10)
