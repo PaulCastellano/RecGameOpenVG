@@ -111,7 +111,7 @@ void Game::scoreScreen()
 		s[i] = str[i];
 	s[i] = '\0';
 	//TO DO!!!
-	Text(this->windowWidth / 6, this->windowWidth / 2, s, SerifTypeface, this->windowWidth / 10);
+	Text(this->windowWidth / 6, this->windowHeight / 5, s, SerifTypeface, this->windowWidth / 10);
 	free(s);
 	str = "\0";
 	End();
