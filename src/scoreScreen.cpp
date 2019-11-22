@@ -34,7 +34,7 @@ void Game::scoreScreen()
 	while (++i < str.length())
 		s[i] = str[i];
 	s[i] = '\0';
-	//Text(this->windowWidth / 150, this->windowHeight - 10 - 2 * TextHeight(SerifTypeface, this->windowWidth / 50), s, SerifTypeface, this->windowWidth / 40);
+	Text(this->xOffset, this->windowHeight - 2 * TextHeight(SerifTypeface, this->windowWidth / this->settingsSize) - 2 * this->yOffset, s, SerifTypeface, this->windowWidth / this->settingsSize);
 	free(s);
 
 	if (this->colorMode == 1)
