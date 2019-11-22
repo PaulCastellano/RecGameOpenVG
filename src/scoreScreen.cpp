@@ -71,7 +71,7 @@ void Game::scoreScreen()
 	while (++i < str.length())
 		s[i] = str[i];
 	s[i] = '\0';
-	//Text(this->windowWidth / 150, this->windowHeight - 10 - 4 * TextHeight(SerifTypeface, this->windowWidth / 40), s, SerifTypeface, this->windowWidth / 40);
+	Text(this->xOffset, this->windowHeight - 4 * TextHeight(SerifTypeface, this->windowWidth / this->settingsSize) - 4 * this->yOffset, s, SerifTypeface, this->windowWidth / this->settingsSize);
 	free(s);
 
 	if (this->timerCount < 10)
