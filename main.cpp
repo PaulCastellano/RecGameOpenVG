@@ -145,6 +145,8 @@ int main()
 		}
 		pthread_cancel(timerThread);
 		pthread_cancel(scoreShowThread);
+		pthread_join(timerThread, NULL);
+		pthread_join(scoreShowThread, NULL);
 		if (c != 'R')
 		{
 			g.resultScreen();

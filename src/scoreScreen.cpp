@@ -66,7 +66,7 @@ void Game::scoreScreen()
 	else if (this->time == 3)
 		str = "Timp: 3 min";
 	else
-		str = "Timp: 4 min";
+		str = "Timp: 5 min";
 	s = (char *)malloc(sizeof(char) * str.length() + 1);
 	i = -1;
 	while (++i < str.length())
