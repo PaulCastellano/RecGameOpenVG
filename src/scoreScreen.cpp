@@ -54,17 +54,16 @@ void Game::scoreScreen()
 		Fill(0, 0, 255, 1);
 
 		Rect(TextWidth(s, SerifTypeface, this->windowWidth / this->settingsSize) + 2 * this->xOffset + 2 * this->windowWidth / this->settingsSize, this->windowHeight - 3 * TextHeight(SerifTypeface, this->windowWidth / this->settingsSize) - 3 * this->yOffset - 10, 2 * this->windowWidth / this->settingsSize, TextHeight(SerifTypeface, this->windowWidth / this->settingsSize));
+
 		//TO DO!!!
-		//Line (x1, y1, x2, y2);
-		//Fill(0, 0, 0, 1);
-		//Line(TextWidth(s, SerifTypeface, this->windowWidth / this->settingsSize) + 2 * this->xOffset + 2 * this->windowWidth / this->settingsSize, this->windowHeight - 3 * TextHeight(SerifTypeface, this->windowWidth / this->settingsSize) - 3 * this->yOffset - 10, TextWidth(s, SerifTypeface, this->windowWidth / this->settingsSize) + 2 * this->xOffset + 2 * this->windowWidth / this->settingsSize + 2 * this->windowWidth / this->settingsSize, this->windowHeight - 3 * TextHeight(SerifTypeface, this->windowWidth / this->settingsSize) - 3 * this->yOffset - 10 + TextHeight(SerifTypeface, this->windowWidth / this->settingsSize));
+		Fill(0, 0, 0, 1);
+		Text(TextWidth(s, SerifTypeface, this->windowWidth / this->settingsSize) + 2 * this->xOffset + 2 * this->windowWidth / this->settingsSize, this->windowHeight - 3 * TextHeight(SerifTypeface, this->windowWidth / this->settingsSize) - 3 * this->yOffset - 10, "X", SerifTypeface, this->windowWidth / this->settingsSize);
 	}
 	Fill(0, 0, 0, 1);
-	Line(0, 0, this->windowWidth, this->windowHeight);
 	free(s);
 
 	if (this->time == 2)
-		str = "Timp: 2 minX";
+		str = "Timp: 2 min";
 	else if (this->time == 3)
 		str = "Timp: 3 min";
 	else
