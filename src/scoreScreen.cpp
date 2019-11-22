@@ -64,7 +64,7 @@ void Game::scoreScreen()
 	free(s);
 
 	if (this->time == 2)
-		str = "Timp: 2 min";
+		str = "Timp: 2 minX";
 	else if (this->time == 3)
 		str = "Timp: 3 min";
 	else
