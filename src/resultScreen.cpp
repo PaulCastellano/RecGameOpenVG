@@ -28,7 +28,7 @@ void Game::resultScreen()
 	while (++i < str.length())
 		s[i] = str[i];
 	s[i] = '\0';
-	Text((this->windowWidth - TextWidth(s, SerifTypeface, this->windowWidth / 5)) / 2, (this->windowHeight - TextHeight(SerifTypeface, this->windowWidth / 5)) / 2, s, SerifTypeface, this->windowWidth / 5);
+	Text((this->windowWidth - TextWidth(s, SerifTypeface, this->windowWidth / 7)) / 2, (this->windowHeight - TextHeight(SerifTypeface, this->windowWidth / 7)) / 2, s, SerifTypeface, this->windowWidth / 7);
 	free(s);
 	str = "\0";
 
