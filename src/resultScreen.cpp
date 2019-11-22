@@ -6,7 +6,6 @@ void Game::resultScreen()
 	char *s;
 	int i;
 	WindowClear();
-	// Start(this->windowWidth, this->windowHeight);
 	Background(255, 255, 255);
 
 	if (abs(this->score) < 10)
@@ -29,7 +28,7 @@ void Game::resultScreen()
 	while (++i < str.length())
 		s[i] = str[i];
 	s[i] = '\0';
-	Text(0, 0, s, SerifTypeface, this->windowWidth / 10);
+	Text((this->windowWidth - TextWidth(s, SerifTypeface, this->windowWidth / 5)) / 2, (this->windowHeight - TextHeight(SerifTypeface, this->windowWidth / 5)) / 2, s, SerifTypeface, this->windowWidth / 5);
 	free(s);
 	str = "\0";
 
