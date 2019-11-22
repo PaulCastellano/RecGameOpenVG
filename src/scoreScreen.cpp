@@ -48,7 +48,7 @@ void Game::scoreScreen()
 	s[i] = '\0';
 	Text(this->xOffset, this->windowHeight - 3 * TextHeight(SerifTypeface, this->windowWidth / this->settingsSize) - 3 * this->yOffset, s, SerifTypeface, this->windowWidth / this->settingsSize);
 	Fill(255, 0, 0, 1);
-	Rect(TextWidth(s, SerifTypeface, this->windowWidth / this->settingsSize) + this->xOffset, this->windowHeight - 3 * TextHeight(SerifTypeface, this->windowWidth / this->settingsSize) - 3 * this->yOffset, this->windowWidth / this->settingsSize, TextHeight(SerifTypeface, this->windowWidth / this->settingsSize));
+	Rect(TextWidth(s, SerifTypeface, this->windowWidth / this->settingsSize) + this->xOffset, this->windowHeight - 3 * TextHeight(SerifTypeface, this->windowWidth / this->settingsSize) - 3 * this->yOffset - 10, 2 * this->windowWidth / this->settingsSize, TextHeight(SerifTypeface, this->windowWidth / this->settingsSize));
 	if (this->colorMode == 2)
 	{
 		Fill(0, 0, 255, 1);
@@ -59,6 +59,7 @@ void Game::scoreScreen()
 		//TO DO!!!
 		// Line(...);
 	}
+	Fill(0, 0, 0, 1);
 	free(s);
 
 	if (this->time == 2)
