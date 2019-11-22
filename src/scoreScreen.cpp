@@ -46,9 +46,9 @@ void Game::scoreScreen()
 	while (++i < str.length())
 		s[i] = str[i];
 	s[i] = '\0';
-	//Text(this->windowWidth / 150, this->windowHeight - 10 - 3 * TextHeight(SerifTypeface, this->windowWidth / 50), s, SerifTypeface, this->windowWidth / 40);
-	//Fill(255, 0, 0, 1);
-	//Rect(TextWidth(s, SerifTypeface, this->windowWidth / 40) + 2, this->windowHeight - 10 - 3 * TextHeight(SerifTypeface, this->windowWidth / 40), this->windowWidth / 24, TextHeight(SerifTypeface, this->windowWidth / 40));
+	Text(this->xOffset, this->windowHeight - 3 * TextHeight(SerifTypeface, this->windowWidth / this->settingsSize) - 3 * this->yOffset, s, SerifTypeface, this->windowWidth / this->settingsSize);
+	Fill(255, 0, 0, 1);
+	Rect(TextWidth(s, SerifTypeface, this->windowWidth / this->settingsSize) + this->xOffset, this->windowHeight - 3 * TextHeight(SerifTypeface, this->windowWidth / this->settingsSize) - 3 * this->yOffset, this->windowWidth / this->settingsSize, TextHeight(SerifTypeface, this->windowWidth / this->settingsSize));
 	if (this->colorMode == 2)
 	{
 		Fill(0, 0, 255, 1);
