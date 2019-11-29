@@ -8,7 +8,10 @@ void *score(void *varg)
 {
 	while (g.getTimerCount() >= 0)
 	{
-		c = serialGetchar(fd);
+		if (serialDataAvail(fd) != -1)
+			c = serialGetchar(fd);
+		else
+			fd = serialOpen("/dev/ttyACM0", 115200);
 		if (c == '+')
 		{
 			g.setScore(g.getScore() + 1);
@@ -70,7 +73,10 @@ int main()
 		g.mainMenu();
 		while (!gameStart)
 		{
-			c = serialGetchar(fd);
+			if (serialDataAvail(fd) != -1)
+				c = serialGetchar(fd);
+			else
+				fd = serialOpen("/dev/ttyACM0", 115200);
 			if (c == 'S')
 				settingsCount++;
 			else if (c == '1')
